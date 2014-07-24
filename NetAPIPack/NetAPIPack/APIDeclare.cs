@@ -23,7 +23,7 @@ namespace NetAPIPack
 
         #region Windows
 
-        [DllImport("user32.dll")]
+        [DllImport("user32.dll")] // http://blog.hubeen.kr/220070818714
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
@@ -49,6 +49,13 @@ namespace NetAPIPack
 
         [DllImport("advapi32.dll", SetLastError = true)] // http://blog.hubeen.kr/220066157791
         public static extern bool GetUserName(StringBuilder sb, ref Int32 length);
+
+        #endregion
+
+        #region Mouse&Icon
+
+        [DllImport("user32.dll")] // http://blog.hubeen.kr/220064758268
+        public static extern bool SwapMouseButton(bool bswap);
 
         #endregion
     }
