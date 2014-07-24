@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NetAPIPack;
 
 namespace TestApplication
 {
@@ -14,6 +15,21 @@ namespace TestApplication
         public Form1()
         {
             InitializeComponent();
+        }
+
+        
+
+        private void SetWindowForeground_Click(object sender, EventArgs e)
+        {
+            NetAPIPack.Handle hwnd = new NetAPIPack.Handle();
+            hwnd = NetAPIPack.Handle.FindWindowByTitle(Param.Text);
+            if (hwnd.IsNullHandle)
+            {
+                MessageBox.Show("Window Title Name " + Param.Text + " dosen't exist.");
+                return;
+            }
+            NetAPIPack.Windows.Window.SetWindowFocus(hwnd);
+
         }
     }
 }

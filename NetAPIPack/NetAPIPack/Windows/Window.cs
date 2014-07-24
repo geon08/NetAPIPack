@@ -6,11 +6,16 @@ using System.Runtime.InteropServices;
 
 namespace NetAPIPack.Windows
 {
-    public class Windows
+    public class Window
     {
+
+        public static bool SetWindowFocus(Handle Hwnd)
+        {
+            return APIDeclare.SetForegroundWindow(Hwnd.HandleID);
+        }
+
         
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
 
     }
 }
