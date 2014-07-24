@@ -28,6 +28,7 @@ namespace TestApplication
                 MessageBox.Show("Window Title Name " + Param.Text + " dosen't exist.");
                 return;
             }
+            
             NetAPIPack.Windows.Window.SetWindowFocus(hwnd);
 
         }
