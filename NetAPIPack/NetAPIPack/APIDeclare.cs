@@ -58,5 +58,20 @@ namespace NetAPIPack
         public static extern bool SwapMouseButton(bool bswap);
 
         #endregion
+
+        #region Directory & File & Drive
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)] // http://blog.hubeen.kr/220070298785
+        public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
+
+        [DllImport("kernel32.dll")] // http://blog.hubeen.kr/220048162592
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool CreateDirectory(string lpPathName,IntPtr lpSecurityAttributes);
+
+        [DllImport("kernel32.dll", SetLastError = true)] // http://blog.hubeen.kr/220054361323
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool DeleteFile(string lpFileName);
+
+        #endregion
     }
 }
