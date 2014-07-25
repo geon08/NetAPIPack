@@ -14,7 +14,7 @@ namespace NetAPIPack.Windows
             return APIDeclare.SetForegroundWindow(Hwnd.HandleID);
         }
 
-        
+       
 
 
     }
