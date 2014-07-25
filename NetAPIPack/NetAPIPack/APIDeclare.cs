@@ -42,6 +42,9 @@ namespace NetAPIPack
 
         #endregion
 
+
+
+
         #region System
 
         [DllImport("kernel32.dll")] // http://blog.hubeen.kr/220054328883
@@ -51,6 +54,10 @@ namespace NetAPIPack
         public static extern bool GetUserName(StringBuilder sb, ref Int32 length);
 
         #endregion
+
+
+
+
 
         #region Mouse&Icon
 

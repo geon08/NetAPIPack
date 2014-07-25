@@ -19,11 +19,11 @@ namespace NetAPIPack
         {
             HandleID = Handle;
         }
-        public Handle(string Title, string ClassName)
-        {
-            HandleID = APIDeclare.FindWindow(ClassName, Title);
+        //public Handle(string Title, string ClassName)
+        //{
+        //    HandleID = APIDeclare.FindWindow(ClassName, Title);
             
-        }
+        //}
         
         
 
@@ -57,9 +57,10 @@ namespace NetAPIPack
             return new Handle(APIDeclare.FindWindow(ClassID, null));
         }
 
-        public static Handle FindWindow(string ClassID, string Title)
+        public static Handle FindWindowHandle(string ClassID, string Title)
         {
             return new Handle(APIDeclare.FindWindow(ClassID, Title));
         }
+
     }
 }
