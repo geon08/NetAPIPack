@@ -66,7 +66,7 @@ namespace NetAPIPack
 
         #endregion
 
-        #region Directory & File & Drive
+        #region File System Management
 
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode)] // http://blog.hubeen.kr/220070298785
         public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
