@@ -32,6 +32,13 @@ namespace NetAPIPack
 
         #endregion
 
+        #region Windows Class & Module
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)] // http://blog.hubeen.kr/220071858298
+        public static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
+
+        #endregion
+
         #region Text
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)] // http://blog.hubeen.kr/220068633546
@@ -73,5 +80,7 @@ namespace NetAPIPack
         public static extern bool DeleteFile(string lpFileName);
 
         #endregion
+
+        
     }
 }
