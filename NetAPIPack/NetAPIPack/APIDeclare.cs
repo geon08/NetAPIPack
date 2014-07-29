@@ -21,6 +21,22 @@ namespace NetAPIPack
         #endregion
 
 
+        #region SendMessage
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern IntPtr SendMessage_Text(IntPtr hWnd, UInt32 Msg, IntPtr wParam, StringBuilder lParam);
+
+        
+
+
+
+
+        #endregion
+
+
         #region Windows
 
         [DllImport("user32.dll")] // http://blog.hubeen.kr/220070818714
@@ -41,7 +57,7 @@ namespace NetAPIPack
 
         #region Text
 
-
+        
 
         #endregion
 
