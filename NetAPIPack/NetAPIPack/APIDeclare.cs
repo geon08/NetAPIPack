@@ -41,11 +41,7 @@ namespace NetAPIPack
 
         #region Text
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto)] // http://blog.hubeen.kr/220068633546
-        public static extern string CharUpper([In,Out] StringBuilder Ipsz);
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto)] // http://blog.hubeen.kr/220068294200
-        public static extern string CharLower([In, Out] StringBuilder Ipsz);
 
         #endregion
 
@@ -75,16 +71,7 @@ namespace NetAPIPack
 
         #region File System Management
 
-        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)] // http://blog.hubeen.kr/220070298785
-        public static extern bool CopyFile(string lpExistingFileName, string lpNewFileName, bool bFailIfExists);
 
-        [DllImport("kernel32.dll")] // http://blog.hubeen.kr/220048162592
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool CreateDirectory(string lpPathName,IntPtr lpSecurityAttributes);
-
-        [DllImport("kernel32.dll", SetLastError = true)] // http://blog.hubeen.kr/220054361323
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool DeleteFile(string lpFileName);
 
         #endregion
 
